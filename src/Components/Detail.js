@@ -31,10 +31,12 @@ const Detail = () => {
 
                 <img className="poke-image w-25" src={listsDetail.sprites ? listsDetail.sprites?.front_default || listsDetail.sprites?.front_shiny : "https://via.placeholder.com/468x60?text=Image+not+found"}></img>
 
-                <h3 className="text-capitalize">{listsDetail?.species?.name}</h3>
-
                 <div>
                     <Table borderless hover>
+                        <tr>
+                            <td className="p-3">Species</td>
+                            <td className="text-start fw-bold text-capitalize">{listsDetail?.species?.name}</td>
+                        </tr>
                         <tr>
                             <td className="p-3">Height</td>
                             <td className="text-start">{listsDetail.height}</td>
